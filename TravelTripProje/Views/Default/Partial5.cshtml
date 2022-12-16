@@ -1,0 +1,14 @@
+﻿@using TravelTripProje.Models.Siniflar
+@model List<Blog>
+<div class="box1-left">
+    @foreach (var c in Model)
+    {
+        <div class="bot-img">
+           <a href="/Blog/BlogDetay/@c.ID"> <img src="@c.BlogImage" alt=""    style ="width:120px;height:80px"  /> </a> 
+        </div>
+        <div class="bot-desc1">
+            <a href="/Blog/BlogDetay/@c.ID"> <p>@c.Aciklama.Substring(0,100)... </p> </a>
+        </div>
+        <div class="clear"></div>//düzende her gelene sıfırlayıp düzen alıyor.
+     }
+</div>
